@@ -4,7 +4,7 @@
 
 return array (
   'APP_ENV' => 'prod',
-  'APP_SECRET' => '',
+  'APP_SECRET' => '0ebdeeab87be67611a8ea09b864876e0',
   'APP_SHARE_DIR' => 'var/share',
   'DEFAULT_URI' => 'http://localhost',
   'DATABASE_URL' => 'postgresql://postgres.yrgukqqdoxuxlvjglzxn:zxNNF6AJoKWlzpGf@aws-1-eu-central-1.pooler.supabase.com:6543/postgres?pgbouncer=true&serverVersion=15&charset=utf8',
