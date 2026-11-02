@@ -15,6 +15,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/html
 COPY . .
 
+RUN touch .env
+
 RUN composer install --no-dev --optimize-autoloader
 
 CMD php bin/console doctrine:migrations:migrate --no-interaction && apache2-foreground
