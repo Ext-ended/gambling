@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les meilleurs paries sur la roulette{% endblock %}
+
+{% block body %}
+{% include 'includes/header.html.twig' %}
+<head>
+    <link rel="stylesheet" href="{{ asset('styles/leaderboard.css') }}"></link>
+</head>
+
+<body>
+<header>
+    <div class="leaderboard">
+        <select name="limit" id="spinner-leaderboard-limit" onchange="window.location.href = this.value">
+        <option value="{{ path('app_spinner_leaderboard', 
+        {'sort': sort, 'direction': direction, 'limit': '20', 'page': page, 'user': user }) }}"
+            {{ limit == 20 ? 'selected' : '' }}>20
+        </option>
+        <option value="{{ path('app_spinner_leaderboard', 
+        {'sort': sort, 'direction': direction, 'limit': '50', 'page': page, 'user': user }) }}"
+            {{ limit == 50 ? 'selected' : '' }}>50
+        </option>
+        <option value="{{ path('app_spinner_leaderboard', 
+        {'sort': sort, 'direction': direction, 'limit': '100', 'page': page, 'user': user }) }}"
+            {{ limit == 100 ? 'selected' : '' }}>100
+        </option>
+    </select>
+
+    <form method="GET" action="{{ path('app_spinner_leaderboard') }}">
+        <input type="hidden" name="sort" value="{{ sort }}">
+        <input type="hidden" name="direction" value="{{ direction }}">
+        <input type="hidden" name="limit" value="{{ limit }}">
+
+        <div class="leaderboard-input">
+            <label for="user">Rechercher un utilisateur</label>
+            <input type="text" id="user" name="user" value="{{ user ?? '' }}" placeholder="Nom d'utilisateur">
+            <button type="submit">Chercher</button>
+        </div>
+    </form>
+    </div>
+</header>
+    <table class="leaderboard-table">
+        <thead>
+            <tr>
+                <th scope="col">Rang</th>
+                <th scope="col">
+                    <a href="{{ path('app_spinner_leaderboard', 
+                        { 'sort': 'spinnedUser', 
+                        'direction': (sort == 'spinnedUser' and direction == 'DESC') ? 'ASC' : 'DESC',
+                        'limit': limit,
+                        'page': page,
+                        'user': user }) }}">
+                    Joueur {{ (sort == 'spinnedUser' and direction == 'DESC') ?  '&#9652;' : '&#9662;' }}
+                    </a>
+                </th>
+                <th scope="col">
+                    <a href="{{ path('app_spinner_leaderboard', 
+                        { 'sort': 'betAmount', 
+                        'direction': (sort == 'betAmount' and direction == 'DESC') ? 'ASC' : 'DESC',
+                        'limit': limit,
+                        'page': page,
+                        'user': user }) }}">
+                        Argent miser {{ (sort == 'betAmount' and direction == 'DESC') ? '&#9652;' : '&#9662;' }}
+                    </a>
+                </th>
+                <th scope="col">
+                    <a href="{{ path('app_spinner_leaderboard', 
+                        { 'sort': 'multiplier', 
+                        'direction': (sort == 'multiplier' and direction == 'DESC') ? 'ASC' : 'DESC',
+                        'limit': limit, 
+                        'page': page,
+                        'user': user }) }}">
+                        Multiplicateur {{ (sort == 'multiplier' and direction == 'DESC') ? '&#9652;' : '&#9662;' }}
+                    </a>
+                </th>
+                <th scope="col">
+                    <a href="{{ path('app_spinner_leaderboard', 
+                        { 'sort': 'payout', 
+                        'direction': (sort == 'payout' and direction == 'DESC') ? 'ASC' : 'DESC',
+                        'limit': limit,
+                        'page': page,
+                        'user': user }) }}">
+                        Gain {{ (sort == 'payout' and direction == 'DESC') ? '&#9652;' : '&#9662;' }}
+                    </a>
+                </th >
+                <th scope="col">
+                    <a href="{{ path('app_spinner_leaderboard', 
+                        { 'sort': 'createdAt', 
+                        'direction': (sort == 'createdAt' and direction == 'DESC') ? 'ASC' : 'DESC',
+                        'limit': limit,
+                        'page': page,
+                        'user': user }) }}">
+                        Date et heure {{ (sort == 'createdAt' and direction == 'DESC') ? '&#9652;' : '&#9662;' }}
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for spinHistory in spinHistories %}
+                <tr class="rank-{{ (page - 1 ) * limit + loop.index }}">
+                    <td class="rank-{{ (page - 1 ) * limit + loop.index }}">{{ (page - 1 ) * limit + loop.index }}</td>
+                    <td class="user">
+                        <img src="{{ '/uploads/profiles/' ~ spinHistory.spinnedUser.image }}" alt="profile" class="profile">
+                        <span class="username">{{ spinHistory.spinnedUser.username }}</span>
+                    </td>
+                    <td class="betAmount">{{ spinHistory.betAmount }}</td>
+                    <td class="multiplier">{{ spinHistory.multiplier }}</td>
+                    <td class="payout">{{ spinHistory.payout }}</td>
+                    <td class="createdAt">{{ spinHistory.createdAt|date('d/m/Y H:i:s') }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div>
+        {% if page > 1 %}
+            <a href="{{ path('app_spinner_leaderboard', 
+                        { 'sort': sort, 
+                        'direction': direction,
+                        'limit': limit,
+                        'page': page - 1,
+                        'user': user }) }}">
+                        <span>&#x2039;</span>
+            </a>
+        {% endif %} 
+            {{ page }} sur {{ totalPages }} 
+        {% if page < totalPages %}
+            <a href="{{ path('app_spinner_leaderboard', 
+                        { 'sort': sort, 
+                        'direction': direction,
+                        'limit': limit,
+                        'page': page + 1,
+                        'user': user }) }}">
+                        <span>&#x203A;</span>
+            </a>
+        {% endif %} 
+    </div>
+</body>
+{% endblock %}

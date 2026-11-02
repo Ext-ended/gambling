@@ -1,0 +1,30 @@
+#home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-size:130%;
+
+    height: 60vh;
+    width: 95vh;
+    
+    margin: 10vh 0vh 0vh 40vh;
+    gap: 35px;
+
+    background-color: var(--red-container);
+    border-radius: 60px;
+
+    box-shadow: 0vh 1vh 4vh 2vh #343333;
+}
+
+#home-image{
+    max-height: 50%;
+    max-width: 50%;
+    justify-content: e;
+}
+
+.home{
+    text-align: center;
+    width: 90%;
+}

@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 25rem;
+
+    transform-origin: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 900px;
+    margin: 32px auto;
+    width: fit-content;
+}
+
+.canvas-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#canvas {
+    display: block;
+    width: 125%;
+    height: auto;
+    margin-top: -11rem;
+    margin-bottom: -10rem;
+    z-index: 1;
+}
+
+.multiplier-badge {
+    font-family: var(--title-font);
+}
+
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+    gap: 30px;
+}

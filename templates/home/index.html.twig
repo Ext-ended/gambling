@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gambling{% endblock %}
+
+{% block body %}
+{% include 'includes/header.html.twig' %}
+<head>
+    <link rel="stylesheet" href="{{ asset('styles/home.css') }}">
+</head>
+
+<body>
+    <div id="home-container">
+        <h1 class="home">Bonjour {% if username %} {{ username }} {% else %} le nouveau/la nouvelle {% endif %}</h1>
+        <h2 class="home">Prêt à parier ?</h2>
+        <p class="home">Ce site te permet de parier sans utiliser d'argent pour t'éviter d'utiliser de l'argent réel, parie, deviens riche (virtuellement) et montre à tes amis qui est le roi des As (ou plutôt qui a une addiction en fonction des gens).</p>
+
+        {% for message in app.flashes('fail') %}
+            <div class="flash-fail">
+                <h5 style="text-align:center;">(PS : {{ message|join('. <br>') }})</h5>
+            </div>
+        {% endfor %}
+
+        {% for message in app.flashes('success') %}
+            <div class="flash-success">
+                <h5 style="text-align:center;">(PS : {{ message|join('. <br>') }})</h5>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+{% endblock %}

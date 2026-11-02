@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification du profile{% endblock %}
+
+{% block body %}
+{% include 'includes/header.html.twig' %}
+    <div class="form">
+        <h1>Modifier mon profil</h1>
+
+        <div id="edit-profile">
+            {{ form(form) }}
+        </div>
+
+        {% for message in app.flashes('fail') %}
+            <div class="flash-fail">
+                <h5 style="text-align:center;">(PS : {{ message|join('. <br>') }})</h5>
+            </div>
+        {% endfor %}
+
+        <button class="btn btn-lg" type="submit">
+            Finir les modifications
+        </button>
+    </div>
+{% endblock %}
