@@ -1,0 +1,10 @@
+babe3f,127.0.0.1,GET,https://127.0.0.1:8000/,1793658866,,200,request,0
+2955d9,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1793658867,7785d1,404,request,1
+7785d1,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1793658867,,404,request,1
+68a119,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1793658868,376040,404,request,1
+376040,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1793658868,,404,request,1
+b9ad79,127.0.0.1,GET,https://127.0.0.1:8000/,1793658875,,200,request,0
+b726a6,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1793658876,9c7c76,404,request,1
+9c7c76,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1793658876,,404,request,1
+20b593,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1793658877,8b30e6,404,request,1
+8b30e6,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1793658877,,404,request,1

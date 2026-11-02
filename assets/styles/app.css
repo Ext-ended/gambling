@@ -51,10 +51,8 @@ button:hover {
     scale: 105%;
 }
 
-input
-
-h1, h2{
-    font-family: var(--title-font);
+h1, h2 {
+    font-family: var(--title-font); 
 }
 
 .navigation-bar{
