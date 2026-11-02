@@ -1,0 +1,53 @@
+header{
+    gap: 10px;
+}
+
+.spinner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+    z-index: 10;
+}
+
+.spinner-container section{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+#spinner-svg{
+    z-index: 0;
+}
+
+#spinner-div{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    transform-origin: center;
+}
+
+#spinner-container section svg{
+    min-height: 125%;
+    min-width: 125%;
+}
+
+/* #spinner-svg{
+    height: 40%;
+    width: 40%;
+}
+
+#spinner{
+    max-height: 50%;
+    max-width: 50%;
+    max-height: 50%;
+    max-width: 50%;
+} */
+
+#roulette{
+    transform-origin: 50% 50%;
+}
+

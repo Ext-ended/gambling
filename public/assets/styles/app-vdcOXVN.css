@@ -1,0 +1,171 @@
+:root {
+    --bg-color-black: rgb(56, 61, 63);
+    --red-container: rgb(196, 69, 69);
+    --red-container-hover: rgb(220, 101, 101);
+    --background-avatar-container: #222222;
+    --input-border: #475569;
+    --white: #f8fafc;
+    --form-fill: #0f172a;
+    --title-font: 'BagelFatOne-Regular', 'Bagel Fat One';
+    --text-font: 'Quicksand';
+}
+
+.leaderboard{
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+    gap: 30px;
+
+    background-color: var(--white);
+    margin: 10px;
+    padding: 20px;
+    color: var(--form-fill);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: 625px;
+}
+
+.leaderboard-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+body {
+    background-color: var(--bg-color-black);
+    font-family: 'Quicksand';
+}
+
+button{
+    background-color: var(--red-container);
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    scale: 100%;
+    transition: background 0.2s, scale 0.2s;
+}
+
+button:hover {
+    background-color: var(--red-container-hover);
+    scale: 105%;
+}
+
+input
+
+h1, h2{
+    font-family: var(--title-font);
+}
+
+.navigation-bar{
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.balance {
+    display: flex;
+    justify-content: end;
+    align-self: center;
+    width: 5px;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.profile-avatar-container {
+    max-width: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-avatar-container);
+    flex-shrink: 0; 
+}
+
+.profile-avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-h1 {
+    text-align: center;
+    font-family: var(--title-font);
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 90%;
+    max-width: 550px;
+    margin: 4rem auto;
+    
+    padding: 2.5rem 2rem;
+    gap: 1rem;
+
+    background-color: var(--red-container);
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background-color: var(--form-fill);
+    color: var(--white);
+    outline: none;
+}
+
+.form input:focus {
+    border-color: var(--input-focus);
+}
+
+.form button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 5px solid white;
+    background-color: var(--red-container);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0,2s;
+}
+
+.form button[type="submit"]:hover {
+    color: var(--red-container);
+    background-color: white;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#registration_form_image, #registration_form_agreeTerms{
+    margin-left: 5px;
+}
+
+#edit-profile input {
+    margin-bottom: 2rem;
+}

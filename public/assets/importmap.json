@@ -1,0 +1,66 @@
+{
+    "app": {
+        "path": "\/assets\/app-TNXHCQF.js",
+        "type": "js"
+    },
+    "\/assets\/stimulus_bootstrap.js": {
+        "path": "\/assets\/stimulus_bootstrap-xCO4u8H.js",
+        "type": "js"
+    },
+    "\/assets\/@symfony\/stimulus-bundle\/controllers.js": {
+        "path": "\/assets\/@symfony\/stimulus-bundle\/controllers-L9tlT4Q.js",
+        "type": "js"
+    },
+    "\/assets\/@symfony\/ux-toggle-password\/controller.js": {
+        "path": "\/assets\/@symfony\/ux-toggle-password\/controller-Naw_D9q.js",
+        "type": "js"
+    },
+    "\/assets\/@symfony\/ux-toggle-password\/style.min.css": {
+        "path": "\/assets\/@symfony\/ux-toggle-password\/style.min-F7aziEP.css",
+        "type": "css"
+    },
+    "\/assets\/@symfony\/ux-turbo\/turbo_controller.js": {
+        "path": "\/assets\/@symfony\/ux-turbo\/turbo_controller-bFCo5ub.js",
+        "type": "js"
+    },
+    "\/assets\/@symfony\/ux-turbo\/mercure_stream_source_element.js": {
+        "path": "\/assets\/@symfony\/ux-turbo\/mercure_stream_source_element-RxrzMZt.js",
+        "type": "js"
+    },
+    "\/assets\/controllers\/hello_controller.js": {
+        "path": "\/assets\/controllers\/hello_controller-VYgvytJ.js",
+        "type": "js"
+    },
+    "\/assets\/controllers\/csrf_protection_controller.js": {
+        "path": "\/assets\/controllers\/csrf_protection_controller-xqKUo0u.js",
+        "type": "js"
+    },
+    "\/assets\/styles\/app.css": {
+        "path": "\/assets\/styles\/app-vdcOXVN.css",
+        "type": "css"
+    },
+    "@hotwired\/stimulus": {
+        "path": "\/assets\/vendor\/@hotwired\/stimulus\/stimulus.index-ryewcoo.js",
+        "type": "js"
+    },
+    "@symfony\/stimulus-bundle": {
+        "path": "\/assets\/@symfony\/stimulus-bundle\/loader-OHfh7x6.js",
+        "type": "js"
+    },
+    "@hotwired\/turbo": {
+        "path": "\/assets\/vendor\/@hotwired\/turbo\/turbo.index-J4AkTcK.js",
+        "type": "js"
+    },
+    "gsap": {
+        "path": "\/assets\/vendor\/gsap\/gsap.index-zGXWegM.js",
+        "type": "js"
+    },
+    "gsap\/Draggable": {
+        "path": "\/assets\/vendor\/gsap\/Draggable-0Byh6cB.js",
+        "type": "js"
+    },
+    "gsap\/InertiaPlugin": {
+        "path": "\/assets\/vendor\/gsap\/InertiaPlugin-lF9hpLQ.js",
+        "type": "js"
+    }
+}

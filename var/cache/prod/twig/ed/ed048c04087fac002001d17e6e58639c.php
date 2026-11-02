@@ -1,0 +1,200 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\MacroNamespace;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Sandbox\SecurityNotAllowedTestError;
+use Twig\Source;
+use Twig\Template;
+use Twig\TemplateWrapper;
+
+/* spinner/index.html.twig */
+class __TwigTemplate_fa944034de0b7e6a23655332cf94d8d3 extends Template
+{
+    private Source $source;
+    /**
+     * @var array<string, MacroNamespace>
+     */
+    private array $macros = [];
+    private \Twig\Runtime\EscaperRuntime $escaper;
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->escaper = $env->getRuntime('Twig\Runtime\EscaperRuntime');
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
+            'javascripts' => [$this, 'block_javascripts'],
+            'body' => [$this, 'block_body'],
+            'script' => [$this, 'block_script'],
+        ];
+    }
+
+    protected function doGetParent(array $context): bool|string|Template|TemplateWrapper
+    {
+        // line 1
+        return $this->parent ??= $this->load("base.html.twig", 1);
+    }
+
+    protected function doDisplay(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $this->parent = $this->load("base.html.twig", 1);
+        yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 3
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_title(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        yield "Home page";
+        return; yield;
+    }
+
+    // line 5
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_stylesheets(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        // line 6
+        yield "    ";
+        yield from $this->yieldParentBlock("stylesheets", $context, $blocks);
+        yield "
+    <link rel=\"stylesheet\" href=\"";
+        // line 7
+        yield (string) $this->escaper->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/spinner.css"), "html", null, true);
+        yield "\">
+    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+    <link href=\"https://fonts.googleapis.com/css2?family=Bagel+Fat+One\" rel=\"stylesheet\">
+";
+        return; yield;
+    }
+
+    // line 13
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_javascripts(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        // line 14
+        yield "    ";
+        yield from $this->yieldParentBlock("javascripts", $context, $blocks);
+        yield "
+";
+        return; yield;
+    }
+
+    // line 17
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_body(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        // line 18
+        yield from $this->load("includes/header.html.twig", 18)->unwrap()->yield($context);
+        // line 19
+        yield "
+    <div class=\"spinner-container\">
+        <header class=\"d-flex flex-column .column-gap-5 justify-content-center align-items-center mb-4\">
+            <div>
+                <h1 class=\"font-bagel text-warning m-0 fs-2\">Spinner</h1>
+            </div>
+            <a href=\"";
+        // line 25
+        yield (string) $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_duck_duck_jump_leaderboard");
+        yield "\">
+                <button>Voir le classement</button>
+            </a>
+        </header>
+
+        <section>
+            <?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg width=\"100%\" height=\"100%\" viewBox=\"0 0 1000 1000\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:space=\"preserve\" xmlns:affinity=\"https://www.affinity.studio/\" style=\"fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;scale: 150%\" id=\"spinner-svg\"><g id=\"spinner\"><ellipse id=\"bois\" cx=\"500\" cy=\"500\" rx=\"424.978\" ry=\"416.857\" style=\"fill:#997866;\"/><clipPath id=\"_clip1\"><ellipse cx=\"500\" cy=\"500\" rx=\"424.978\" ry=\"416.857\"/></clipPath><g clip-path=\"url(#_clip1)\"><g id=\"roulette\"><path id=\"x10\" d=\"M500,879.481c-106.761,0 -203.479,-42.51 -273.507,-111.2l273.507,-268.281l0,379.481Z\" style=\"fill:#e61aaa;\"/><clipPath id=\"_clip2\"><path d=\"M500,879.481c-106.761,0 -203.479,-42.51 -273.507,-111.2l273.507,-268.281l0,379.481Z\"/></clipPath><g clip-path=\"url(#_clip2)\"><g transform=\"matrix(1,0,0,1,37.322956,-27.992217)\"><g transform=\"matrix(-0.966226,-0.257695,0.257695,-0.966226,616.115701,1629.968592)\"><text x=\"414.87px\" y=\"774.61px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">x</text></g><g transform=\"matrix(-0.926483,-0.376338,0.376338,-0.926483,446.31157,1617.941647)\"><text x=\"381.188px\" y=\"765.377px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">1</text></g><g transform=\"matrix(-0.864907,-0.501933,0.501933,-0.864907,281.353273,1584.932223)\"><text x=\"353.966px\" y=\"754.604px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">0</text></g></g></g><path id=\"x8\" d=\"M773.507,768.281c-70.028,68.69 -166.747,111.2 -273.507,111.2l0,-379.481l273.507,268.281Z\" style=\"fill:#911ae6;\"/><clipPath id=\"_clip3\"><path d=\"M773.507,768.281c-70.028,68.69 -166.747,111.2 -273.507,111.2l0,-379.481l273.507,268.281Z\"/></clipPath><g clip-path=\"url(#_clip3)\"><g transform=\"matrix(1,0,0,1,0,-27.992217)\"><g transform=\"matrix(-0.88872,0.458451,-0.458451,-0.88872,1530.647644,1114.124452)\"><text x=\"630.108px\" y=\"742.83px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">x</text></g><g transform=\"matrix(-0.947398,0.320058,-0.320058,-0.947398,1409.607095,1286.406678)\"><text x=\"599.092px\" y=\"759.039px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">8</text></g></g></g><path id=\"x5\" d=\"M886.873,500c0,104.721 -43.338,199.591 -113.366,268.281l-273.507,-268.281l386.873,0Z\" style=\"fill:#1a32e6;\"/><clipPath id=\"_clip4\"><path d=\"M886.873,500c0,104.721 -43.338,199.591 -113.366,268.281l-273.507,-268.281l386.873,0Z\"/></clipPath><g clip-path=\"url(#_clip4)\"><g transform=\"matrix(1,0,0,1,-27.992217,0)\"><g transform=\"matrix(-0.293169,0.956061,-0.956061,-0.293169,1531.56823,-18.715342)\"><text x=\"772.702px\" y=\"556.799px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">x</text></g><g transform=\"matrix(-0.429496,0.903069,-0.903069,-0.429496,1623.106353,155.136645)\"><text x=\"762.55px\" y=\"590.258px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">5</text></g></g></g><path id=\"x3\" d=\"M773.507,231.719c70.028,68.69 113.366,163.56 113.366,268.281l-386.873,0l273.507,-268.281Z\" style=\"fill:#1ac2e6;\"/><clipPath id=\"_clip5\"><path d=\"M773.507,231.719c70.028,68.69 113.366,163.56 113.366,268.281l-386.873,0l273.507,-268.281Z\"/></clipPath><g clip-path=\"url(#_clip5)\"><g transform=\"matrix(1,0,0,1,-27.992217,37.322956)\"><g transform=\"matrix(0.439439,0.898272,-0.898272,0.439439,720.778199,-480.710624)\"><text x=\"745.547px\" y=\"337.151px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">x</text></g><g transform=\"matrix(0.30426,0.952589,-0.952589,0.30426,880.493068,-468.530905)\"><text x=\"760.997px\" y=\"368.508px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">3</text></g></g></g><path id=\"x2\" d=\"M500,120.519c106.761,0 203.479,42.51 273.507,111.2l-273.507,268.281l0,-379.481Z\" style=\"fill:#92e61a;\"/><clipPath id=\"_clip6\"><path d=\"M500,120.519c106.761,0 203.479,42.51 273.507,111.2l-273.507,268.281l0,-379.481Z\"/></clipPath><g clip-path=\"url(#_clip6)\"><g transform=\"matrix(1,0,0,1,0,52.792983)\"><g transform=\"matrix(0.947398,0.320058,-0.320058,0.947398,94.997702,-169.6542)\"><text x=\"563.631px\" y=\"204.181px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">x</text></g><g transform=\"matrix(0.890626,0.454736,-0.454736,0.890626,163.148621,-247.816425)\"><text x=\"596.74px\" y=\"215.248px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">2</text></g></g></g><path id=\"x1\" d=\"M226.493,231.719c70.028,-68.69 166.747,-111.2 273.507,-111.2l-0,379.481l-273.507,-268.281Z\" style=\"fill:#dae61a;\"/><clipPath id=\"_clip7\"><path d=\"M226.493,231.719c70.028,-68.69 166.747,-111.2 273.507,-111.2l-0,379.481l-273.507,-268.281Z\"/></clipPath><g clip-path=\"url(#_clip7)\"><g transform=\"matrix(1,0,0,1,37.322956,52.792983)\"><g transform=\"matrix(0.891316,-0.453383,0.453383,0.891316,-68.740422,176.50946)\"><text x=\"333.79px\" y=\"231.632px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">x</text></g><g transform=\"matrix(0.940786,-0.339002,0.339002,0.940786,-51.623606,136.519706)\"><text x=\"364.976px\" y=\"216.032px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">1</text></g></g></g><path id=\"x0-5\" affinity:id=\"x0,5\" d=\"M113.127,500c0,-104.721 43.338,-199.591 113.366,-268.281l273.507,268.281l-386.873,0Z\" style=\"fill:#e6a91a;\"/><clipPath id=\"_clip8\"><path d=\"M113.127,500c0,-104.721 43.338,-199.591 113.366,-268.281l273.507,268.281l-386.873,0Z\"/></clipPath><g clip-path=\"url(#_clip8)\"><g transform=\"matrix(1,0,0,1,52.792983,37.322956)\"><g transform=\"matrix(0.184915,-0.982754,0.982754,0.184915,-264.612176,547.48293)\"><text x=\"197.746px\" y=\"433.264px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">x</text></g><g transform=\"matrix(0.328094,-0.944645,0.944645,0.328094,-239.667821,460.78112)\"><text x=\"204.077px\" y=\"398.867px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">0</text></g><g transform=\"matrix(0.434647,-0.900601,0.900601,0.434647,-203.481731,400.636738)\"><text x=\"217.364px\" y=\"362.39px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">.</text></g><g transform=\"matrix(0.533205,-0.845986,0.845986,0.533205,-187.180934,351.543323)\"><text x=\"224.966px\" y=\"345.388px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">5</text></g></g></g><path id=\"x0\" d=\"M226.493,768.281c-70.028,-68.69 -113.366,-163.56 -113.366,-268.281l386.873,0l-273.507,268.281Z\" style=\"fill:#e61a1a;\"/><clipPath id=\"_clip9\"><path d=\"M226.493,768.281c-70.028,-68.69 -113.366,-163.56 -113.366,-268.281l386.873,0l-273.507,268.281Z\"/></clipPath><g clip-path=\"url(#_clip9)\"><g transform=\"matrix(1,0,0,1,52.792983,0)\"><g transform=\"matrix(-0.440464,-0.89777,0.89777,-0.440464,-230.78865,1107.70684)\"><text x=\"229.795px\" y=\"625.773px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">x</text></g><g transform=\"matrix(-0.303153,-0.952942,0.952942,-0.303153,-287.243557,978.823405)\"><text x=\"214.265px\" y=\"594.436px\" style=\"font-family:\x27BagelFatOne-Regular\x27, \x27Bagel Fat One\x27;font-size:62.5px;\">0</text></g></g></g></g></g><path id=\"pointer\" d=\"M552.985,86.358l-52.985,105.971l-52.985,-105.971c17.36,-2.122 35.044,-3.215 52.985,-3.215c17.942,0 35.625,1.093 52.985,3.215Z\" style=\"fill:#f00;\"/></g></svg>
+            <div>
+                <p>Votre solde actuelle est de <span id=\"balance\">";
+        // line 33
+        yield (string) $this->escaper->escape(($context["userBalance"] ?? null), "html", null, true);
+        yield "</span>€</p>
+                <p>Miser une somme : <input type=\"number\" label=\"betAmount\" id=\"betAmount\"></p>
+                <button id=\"spin\">tourner</button>
+            </div>
+        </section>
+    </div>  
+
+";
+        // line 40
+        yield from $this->unwrap()->yieldBlock('script', $context, $blocks);
+        return; yield;
+    }
+
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_script(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        // line 41
+        yield "    <script type=\"module\" src=\"";
+        yield (string) $this->escaper->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("script/spinner.js"), "html", null, true);
+        yield "\"></script>
+";
+        return; yield;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName(): string
+    {
+        return "spinner/index.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDefaultEscapeStrategy(): string|false
+    {
+        return "html";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo(): array
+    {
+        return array (  157 => 41,  146 => 40,  136 => 33,  125 => 25,  117 => 19,  115 => 18,  108 => 17,  100 => 14,  93 => 13,  83 => 7,  78 => 6,  71 => 5,  60 => 3,  49 => 1,);
+    }
+
+    public function getSourceContext(): Source
+    {
+        return new Source("", "spinner/index.html.twig", "C:\\Users\\lefra\\Documents\\gambling\\templates\\spinner\\index.html.twig");
+    }
+}

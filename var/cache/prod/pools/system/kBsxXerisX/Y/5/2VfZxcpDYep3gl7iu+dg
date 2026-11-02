@@ -1,0 +1,46 @@
+<?php //getType.a%253A3%253A%257Bi%253A0%253Bs%253A27%253A%2522Symfony%255CComponent%255CForm%255CForm%2522%253Bi%253A1%253Bs%253A6%253A%2522errors%2522%253Bi%253A2%253Ba%253A0%253A%257B%257D%257D
+
+return [PHP_INT_MAX, new class() implements \Symfony\Component\Cache\Traits\CachedValueInterface { public function getValue(): mixed { return \deepclone_from_array([
+    'classes' => ['Symfony\\Component\\TypeInfo\\Type\\CollectionType', 'Symfony\\Component\\TypeInfo\\Type\\GenericType', 'Symfony\\Component\\TypeInfo\\Type\\UnionType', 'Symfony\\Component\\TypeInfo\\Type\\BuiltinType', 'Symfony\\Component\\TypeInfo\\Type\\ObjectType'],
+    'objectMeta' => [0, 1, 2, 3, 3, 4, 3],
+    'prepared' => 0,
+    'properties' => [
+        'Symfony\\Component\\TypeInfo\\Type\\CollectionType' => [
+            'type' => [1],
+            'isList' => [false],
+        ],
+        'Symfony\\Component\\TypeInfo\\Type\\GenericType' => [
+            'variableTypes' => [
+                1 => [2, 5],
+            ],
+            'type' => [1 => 6],
+        ],
+        'Symfony\\Component\\TypeInfo\\Type\\UnionType' => [
+            'types' => [
+                2 => [3, 4],
+            ],
+        ],
+        'Symfony\\Component\\TypeInfo\\Type\\BuiltinType' => [
+            'typeIdentifier' => [3 => \Symfony\Component\TypeInfo\TypeIdentifier::INT, \Symfony\Component\TypeInfo\TypeIdentifier::STRING, 6 => \Symfony\Component\TypeInfo\TypeIdentifier::ARRAY],
+        ],
+        'Symfony\\Component\\TypeInfo\\Type\\ObjectType' => [
+            'className' => [5 => 'Symfony\\Component\\Form\\FormError'],
+        ],
+    ],
+    'resolve' => [
+        'Symfony\\Component\\TypeInfo\\Type\\CollectionType' => [
+            'type' => [true],
+        ],
+        'Symfony\\Component\\TypeInfo\\Type\\GenericType' => [
+            'variableTypes' => [
+                1 => [true, true],
+            ],
+            'type' => [1 => true],
+        ],
+        'Symfony\\Component\\TypeInfo\\Type\\UnionType' => [
+            'types' => [
+                2 => [true, true],
+            ],
+        ],
+    ],
+], null, true); } }];

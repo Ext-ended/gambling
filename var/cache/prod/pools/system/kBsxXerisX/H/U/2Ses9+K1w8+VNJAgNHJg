@@ -1,0 +1,30 @@
+<?php //getType.a%253A3%253A%257Bi%253A0%253Bs%253A15%253A%2522App%255CEntity%255CUser%2522%253Bi%253A1%253Bs%253A5%253A%2522image%2522%253Bi%253A2%253Ba%253A0%253A%257B%257D%257D
+
+return [PHP_INT_MAX, new class() implements \Symfony\Component\Cache\Traits\CachedValueInterface { public function getValue(): mixed { return \deepclone_from_array([
+    'classes' => ['Symfony\\Component\\TypeInfo\\Type\\NullableType', 'Symfony\\Component\\TypeInfo\\Type\\BuiltinType'],
+    'objectMeta' => [0, 1, 1],
+    'prepared' => 0,
+    'properties' => [
+        'Symfony\\Component\\TypeInfo\\Type\\UnionType' => [
+            'types' => [
+                [1, 2],
+            ],
+        ],
+        'Symfony\\Component\\TypeInfo\\Type\\NullableType' => [
+            'type' => [2],
+        ],
+        'Symfony\\Component\\TypeInfo\\Type\\BuiltinType' => [
+            'typeIdentifier' => [1 => \Symfony\Component\TypeInfo\TypeIdentifier::NULL, \Symfony\Component\TypeInfo\TypeIdentifier::STRING],
+        ],
+    ],
+    'resolve' => [
+        'Symfony\\Component\\TypeInfo\\Type\\UnionType' => [
+            'types' => [
+                [true, true],
+            ],
+        ],
+        'Symfony\\Component\\TypeInfo\\Type\\NullableType' => [
+            'type' => [true],
+        ],
+    ],
+], null, true); } }];

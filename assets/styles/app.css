@@ -53,7 +53,7 @@ button:hover {
 
 input
 
-h1, h2 {
+h1, h2{
     font-family: var(--title-font);
 }
 
